@@ -1,0 +1,6 @@
+[2024-01-09T00:19:45.800+0500] {manager.py:469} INFO - Processing files using up to 1 processes at a time 
+[2024-01-09T00:19:45.801+0500] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2024-01-09T00:19:45.801+0500] {manager.py:471} INFO - Checking for new files in /home/ml-srv-admin/xflow_project/airflow/dags every 300 seconds
+[2024-01-09T00:19:45.802+0500] {manager.py:738} INFO - Searching for files in /home/ml-srv-admin/xflow_project/airflow/dags
+[2024-01-09T00:19:45.803+0500] {manager.py:741} INFO - There are 0 files in /home/ml-srv-admin/xflow_project/airflow/dags
+[2024-01-09T00:20:15.282+0500] {manager.py:451} INFO - Exiting gracefully upon receiving signal 15
