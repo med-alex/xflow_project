@@ -9,7 +9,7 @@ key = 'AIzaSyCHgIuogiRoolZaQ9AEm82DeB_04qveUM4'
 api = Api(api_key=key)
 
 query = "'rickroll'"
-video = api.search_by_keywords(q=query, search_type=["video"], count=10, limit=30)
+video = api.search_by_keywords(q=query, search_type=["video"], count=100, limit=30)
 
 maxResults = 100
 nextPageToken = ""

@@ -1,11 +1,12 @@
 import pandas as pd
-import numpy as np
 
-df = pd.read_csv('/home/ml-srv-admin/xflow_project/datasets/data_processed.csv', header=None)
+
+df = pd.read_csv('/home/ml-srv-admin/xflow_project/datasets/data_processed.csv')
 
 l = int(len(df)*0.7)
 train = df[:l]
 test = df[l+1:]
 
-train.to_csv('/home/ml-srv-admin/xflow_project/datasets/data_train.csv', header=None, index=None)
-test.to_csv('/home/ml-srv-admin/xflow_project/datasets/data_test.csv', header=None, index=None)
+test.columns = ['id', 'norm']
+train.to_csv('/home/ml-srv-admin/xflow_project/datasets/data_train.csv', index=None)
+test.to_csv('/home/ml-srv-admin/xflow_project/datasets/data_test.csv', index=None)
