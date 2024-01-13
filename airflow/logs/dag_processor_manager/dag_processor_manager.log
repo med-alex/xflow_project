@@ -1201,3 +1201,21 @@ File Path                                                                PID    
 -----------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
 /home/ml-srv-admin/xflow_project/airflow/dags/youtube_comments_score.py                           1           0  0.47s           2024-01-13T09:36:47
 ================================================================================
+[2024-01-13T14:37:05.742+0500] {manager.py:738} INFO - Searching for files in /home/ml-srv-admin/xflow_project/airflow/dags
+[2024-01-13T14:37:05.747+0500] {manager.py:741} INFO - There are 1 files in /home/ml-srv-admin/xflow_project/airflow/dags
+[2024-01-13T14:37:18.402+0500] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/ml-srv-admin/xflow_project/airflow/dags/youtube_comments_score.py                           1           0  0.43s           2024-01-13T09:37:18
+================================================================================
+[2024-01-13T14:37:50.208+0500] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/ml-srv-admin/xflow_project/airflow/dags/youtube_comments_score.py                           1           0  0.33s           2024-01-13T09:37:50
+================================================================================
