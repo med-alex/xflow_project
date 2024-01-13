@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1705146236656
+current_stage: None
+description: null
+last_updated_timestamp: 1705146236656
+name: catboost
+run_id: d01247fe60eb44e1b8cd3147337da7a3
+run_link: null
+source: /home/ml-srv-admin/xflow_project/mlflow/2/d01247fe60eb44e1b8cd3147337da7a3/artifacts/catboost
+status: READY
+status_message: null
+storage_location: /home/ml-srv-admin/xflow_project/mlflow/2/d01247fe60eb44e1b8cd3147337da7a3/artifacts/catboost
+user_id: null
+version: 2

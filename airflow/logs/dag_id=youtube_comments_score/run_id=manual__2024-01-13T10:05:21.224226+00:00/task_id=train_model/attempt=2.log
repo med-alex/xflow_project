@@ -1,0 +1,36 @@
+[2024-01-13T15:12:10.594+0500] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: youtube_comments_score.train_model manual__2024-01-13T10:05:21.224226+00:00 [queued]>
+[2024-01-13T15:12:10.601+0500] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: youtube_comments_score.train_model manual__2024-01-13T10:05:21.224226+00:00 [queued]>
+[2024-01-13T15:12:10.601+0500] {taskinstance.py:2171} INFO - Starting attempt 2 of 2
+[2024-01-13T15:12:10.623+0500] {taskinstance.py:2192} INFO - Executing <Task(BashOperator): train_model> on 2024-01-13 10:05:21.224226+00:00
+[2024-01-13T15:12:10.627+0500] {standard_task_runner.py:60} INFO - Started process 22519 to run task
+[2024-01-13T15:12:10.632+0500] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'youtube_comments_score', 'train_model', 'manual__2024-01-13T10:05:21.224226+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/youtube_comments_score.py', '--cfg-path', '/tmp/tmpw39_lchk']
+[2024-01-13T15:12:10.636+0500] {standard_task_runner.py:88} INFO - Job 12: Subtask train_model
+[2024-01-13T15:12:10.680+0500] {task_command.py:423} INFO - Running <TaskInstance: youtube_comments_score.train_model manual__2024-01-13T10:05:21.224226+00:00 [running]> on host ml-srv
+[2024-01-13T15:12:10.742+0500] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='admin' AIRFLOW_CTX_DAG_ID='youtube_comments_score' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2024-01-13T10:05:21.224226+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-13T10:05:21.224226+00:00'
+[2024-01-13T15:12:10.743+0500] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-01-13T15:12:10.744+0500] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /home/ml-srv-admin/xflow_project/scripts/train_model.py']
+[2024-01-13T15:12:10.752+0500] {subprocess.py:86} INFO - Output:
+[2024-01-13T15:12:12.165+0500] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-01-13T15:12:12.165+0500] {subprocess.py:93} INFO -   File "/home/ml-srv-admin/xflow_project/scripts/train_model.py", line 18, in <module>
+[2024-01-13T15:12:12.165+0500] {subprocess.py:93} INFO -     mlflow.catboost.log_model(model,
+[2024-01-13T15:12:12.166+0500] {subprocess.py:93} INFO -   File "/home/ml-srv-admin/xflow_project/venv/lib/python3.10/site-packages/mlflow/catboost/__init__.py", line 245, in log_model
+[2024-01-13T15:12:12.166+0500] {subprocess.py:93} INFO -     return Model.log(
+[2024-01-13T15:12:12.166+0500] {subprocess.py:93} INFO -   File "/home/ml-srv-admin/xflow_project/venv/lib/python3.10/site-packages/mlflow/models/model.py", line 619, in log
+[2024-01-13T15:12:12.166+0500] {subprocess.py:93} INFO -     flavor.save_model(path=local_path, mlflow_model=mlflow_model, **kwargs)
+[2024-01-13T15:12:12.166+0500] {subprocess.py:93} INFO -   File "/home/ml-srv-admin/xflow_project/venv/lib/python3.10/site-packages/mlflow/catboost/__init__.py", line 143, in save_model
+[2024-01-13T15:12:12.166+0500] {subprocess.py:93} INFO -     cb_model.save_model(model_data_path, **kwargs)
+[2024-01-13T15:12:12.166+0500] {subprocess.py:93} INFO -   File "/home/ml-srv-admin/xflow_project/venv/lib/python3.10/site-packages/catboost/core.py", line 3300, in save_model
+[2024-01-13T15:12:12.166+0500] {subprocess.py:93} INFO -     raise CatBoostError("There is no trained model to use save_model(). Use fit() to train model. Then use this method.")
+[2024-01-13T15:12:12.166+0500] {subprocess.py:93} INFO - _catboost.CatBoostError: There is no trained model to use save_model(). Use fit() to train model. Then use this method.
+[2024-01-13T15:12:12.352+0500] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-01-13T15:12:12.359+0500] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ml-srv-admin/xflow_project/venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ml-srv-admin/xflow_project/venv/lib/python3.10/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-01-13T15:12:12.362+0500] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=youtube_comments_score, task_id=train_model, execution_date=20240113T100521, start_date=20240113T101210, end_date=20240113T101212
+[2024-01-13T15:12:12.381+0500] {standard_task_runner.py:107} ERROR - Failed to execute job 12 for task train_model (Bash command failed. The command returned a non-zero exit code 1.; 22519)
+[2024-01-13T15:12:12.397+0500] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-01-13T15:12:12.421+0500] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check
